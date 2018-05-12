@@ -8,5 +8,13 @@ drinks = {
 }
 
 
+print ("-(1)----------")
 for name, contents in drinks.items():
-    print (name, contents)
+    if 'vodca' in contents and not ('vermouth' in contents):
+        print (contents)
+
+print ("-(2)----------")
+for name, contents in drinks.items():
+    # 만약 contents에 vermouth나 orange juice가 있으면 drinks dict의 name을 출력.
+    if contents & {'vermouth', 'orange juice'}:
+        print (name)
